@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perangkat Jaringan Komputer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-photo, .device-photo {
+            width: 150px; 
+            height: auto;
+            margin: center;
+        }
+        .device-info {
+            margin-top: 200px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Judul: Pembahasan Perangkat Jaringan Komputer</h1>
+        <h2>Nama Mahasiswa: Rifka Nur Ahsan Ahmad</h2>
+        <h3>NIM Mahasiswa: 607012300121</h3>
+        <h4>Mata Kuliah: Arsitektur Jaringan Komputer</h4>
+        <img src="C:\Users\Rifka Nur Ahsan A\Pictures\Camera Roll\100 FearGod keep it peace.jpg" alt="Foto Anda" class="profile-photo">
+        
+    <button id="info-button">Tampilkan Informasi Perangkat Jaringan</button>
+    <div id="device-info" class="device-info hidden">
+    <h4>Nama Perangkat: Router</h4>
+        <img src="C:\Users\Rifka Nur Ahsan A\Pictures\Camera Roll\Tplinkwifi_net.jpeg" alt="Router" class="device-photo">
+        <p>Router adalah perangkat jaringan yang meneruskan paket data antar jaringan komputer. Router melakukan fungsi penyaluran lalu lintas di Internet dengan memeriksa alamat IP dari setiap paket data dan menentukan jalur terbaik untuk mencapai tujuannya.</p>
+        <p>Sumber informasi: <a href="https://id.wikipedia.org/wiki/Router" target="_blank">Wikipedia</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('info-button').addEventListener('click', function() {
+            var deviceInfo = document.getElementById('device-info');
+            if (deviceInfo.classList.contains('hidden')) {
+                deviceInfo.classList.remove('hidden');
+            } else {
+                deviceInfo.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

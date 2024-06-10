@@ -1,0 +1,19 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-photo, .device-photo {
+            width: 150px; 
+            height: auto;
+            margin: center;
+        }
+        .device-info {
+            margin-top: 200px;
+        }
+        .hidden {
+            display: none;
+        }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perangkat Jaringan Komputer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
             margin: center;
         }
         .device-info {
-            margin-top: 200px;
+            margin-top: 20px;
         }
         .hidden {
             display: none;
@@ -34,13 +34,14 @@
         <h3>NIM Mahasiswa: 607012300121</h3>
         <h4>Mata Kuliah: Arsitektur Jaringan Komputer</h4>
         <img src="FearGod.jpg" alt="Foto" class="profile-photo">
-        
-    <button id="info-button">Tampilkan Informasi Perangkat Jaringan</button>
-    <div id="device-info" class="device-info hidden">
-    <h4>Nama Perangkat: Router</h4>
-        <img src="Router.jpeg" alt="Router" class="device-photo">
-        <p>Router adalah perangkat jaringan yang meneruskan paket data antar jaringan komputer. Router melakukan fungsi penyaluran lalu lintas di Internet dengan memeriksa alamat IP dari setiap paket data dan menentukan jalur terbaik untuk mencapai tujuannya.</p>
-        <p>Sumber informasi: <a href="https://id.wikipedia.org/wiki/Router" target="_blank">Wikipedia</a></p>
+        <button id="download-button">Unduh File Tutorial Hosting Web</button>
+        <br><br>
+        <button id="info-button">Tampilkan Informasi Perangkat Jaringan</button>
+        <div id="device-info" class="device-info hidden">
+            <h4>Nama Perangkat: Router</h4>
+            <img src="Router.jpeg" alt="Router" class="device-photo">
+            <p>Router adalah perangkat jaringan yang meneruskan paket data antar jaringan komputer. Router melakukan fungsi penyaluran lalu lintas di Internet dengan memeriksa alamat IP dari setiap paket data dan menentukan jalur terbaik untuk mencapai tujuannya.</p>
+            <p>Sumber informasi: <a href="https://id.wikipedia.org/wiki/Router" target="_blank">Wikipedia</a></p>
         </div>
     </div>
     <script>
@@ -51,6 +52,15 @@
             } else {
                 deviceInfo.classList.add('hidden');
             }
+        });
+
+        document.getElementById('download-button').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'tutorial_hosting_web.pdf';
+            link.download = 'Tutorial_Hosting_Web.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>

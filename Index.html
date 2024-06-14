@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perangkat Jaringan Komputer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .header {
+            background-color: #00AA13;
+            color: #FFFFFF;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 3px solid #00AA13;
+        }
+        .device-photo {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .device-info {
+            margin-top: 20px;
+            text-align: left;
+            padding: 20px;
+            background-color: #F9F9F9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            background-color: #00AA13;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #007B10;
+        }
+        a {
+            color: #00AA13;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Judul: Pembahasan Perangkat Jaringan Komputer</h1>
+            <h2>Nama Mahasiswa: Rifka Nur Ahsan Ahmad</h2>
+            <h3>NIM Mahasiswa: 607012300121</h3>
+            <h4>Mata Kuliah: Arsitektur Jaringan Komputer</h4>
+        </div>
+        <img src="FearGod.jpg" alt="Foto" class="profile-photo">
+        <br><br>
+        <button id="download-button">Unduh File Tutorial Hosting Web</button>
+        <br><br>
+        <button id="info-button">Tampilkan Informasi Perangkat Jaringan</button>
+        <div id="device-info" class="device-info hidden">
+            <h4>Nama Perangkat: Router</h4>
+            <img src="Router.jpeg" alt="Router" class="device-photo">
+            <p>Router adalah perangkat jaringan yang meneruskan paket data antar jaringan komputer. Router melakukan fungsi penyaluran lalu lintas di Internet dengan memeriksa alamat IP dari setiap paket data dan menentukan jalur terbaik untuk mencapai tujuannya. Router memiliki dua fungsi utama, yaitu mengelola lalu lintas antar jaringan dan membagikan koneksi internet ke beberapa perangkat lain. Selain dua fungsi tersebut, ada beberapa fungsi lain yang dimilikinya, antara lain:</p>
+            <ul>
+                <li>Menghubungkan jaringan lokal ke koneksi DSL (digital subscriber line).</li>
+                <li>Berfungsi sebagai firewall atau melindungi data untuk meningkatkan cyber security agar jaringan internet lebih aman.</li>
+                <li>Mentransmisikan informasi dari ke jaringan lain, menjembatani akses internet dengan sistem kerja networking bridge.</li>
+                <li>Memungkinkan komputer bisa saling berkomunikasi, sehingga dapat terjadi pertukaran data antar node dalam sebuah jaringan.</li>
+                <li>Dapat membaca sumber dan tujuan alamat IP, menentukan routing dari satu node ke node lainnya dalam sebuah jaringan.</li>
+                <li>Menyaring paket data untuk memfilterisasi paket data yang beroperasi pada suatu jaringan.</li>
+                <li>Distribusi alamat IP ke setiap perangkat dalam jaringan tertentu.</li>
+            </ul>
+            <p>Sumber informasi: <a href="https://www.dewaweb.com/blog/apa-itu-router/" target="_blank">dewaweb</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('info-button').addEventListener('click', function() {
+            var deviceInfo = document.getElementById('device-info');
+            if (deviceInfo.classList.contains('hidden')) {
+                deviceInfo.classList.remove('hidden');
+            } else {
+                deviceInfo.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('download-button').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'tutorial_hosting_web.pdf';
+            link.download = 'Tutorial_Hosting_Web.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>

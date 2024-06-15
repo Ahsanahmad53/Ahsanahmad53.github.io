@@ -63,6 +63,7 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #007B10;
@@ -82,6 +83,8 @@
             <h4>Mata Kuliah: Arsitektur Jaringan Komputer</h4>
         </div>
         <img src="FearGod.jpg" alt="Foto" class="profile-photo">
+        <br><br>
+        <button id="download-content-button">Unduh Cara Membuat Isi Web</button>
         <br><br>
         <button id="download-button">Unduh File Tutorial Hosting Web</button>
         <br><br>
@@ -116,6 +119,15 @@
             var link = document.createElement('a');
             link.href = 'TUTORIAL HOSTING DI GITHUB_RIFKA NUR AHSAN AHMAD_607012300121.pdf';
             link.download = 'TUTORIAL HOSTING DI GITHUB_RIFKA NUR AHSAN AHMAD_607012300121.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        document.getElementById('download-content-button').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'CARA MEMBUAT ISI WEB_RIFKA NUR AHSAN AHMAD_607012300121.pdf';
+            link.download = 'CARA MEMBUAT ISI WEB_RIFKA NUR AHSAN AHMAD_607012300121.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
